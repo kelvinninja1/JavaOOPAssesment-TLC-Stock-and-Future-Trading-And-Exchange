@@ -1,8 +1,8 @@
 package io.turntabl;
 
 public class Stocks extends Product {
-    Stocks(Product product) {
-        super(product);
+    public Stocks(String productId, double currentPrice, String exchange) {
+        super(productId, currentPrice, exchange);
     }
 
     @Override

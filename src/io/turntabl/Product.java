@@ -5,7 +5,10 @@ import java.util.List;
 import java.util.Set;
 
 public class Product implements ProductPricingService {
-    public List<Product> productList = new ArrayList<>();
+
+    private String productId;
+    private Double currentPrice;
+    private String exchange;
 
     @Override
     public double price(String exchange, String ticker) {

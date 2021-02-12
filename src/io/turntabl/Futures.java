@@ -1,8 +1,8 @@
 package io.turntabl;
 
 public class Futures extends Product {
-    Futures(Product product) {
-        super(product);
+    public Futures(String productId, double currentPrice, String exchange) {
+        super(productId, currentPrice, exchange);
     }
 
     @Override
