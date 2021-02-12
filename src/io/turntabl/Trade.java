@@ -1,6 +1,7 @@
 package io.turntabl;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public abstract class Trade implements MontrealTradedProducts{
 
