@@ -1,15 +1,17 @@
 package io.turntabl;
 
+import java.util.HashMap;
+
 public abstract class Trade implements MontrealTradedProducts{
-    trade
-    private Product product;
-    private int quantity;
+
+    Map<Product,Integer> productList = new HashMap<Product,Integer>();
 
     @Override
     public void addNewProduct(Product product) throws ProductAlreadyRegisteredException {
-        try {
-            product = new Product("MockID Here");
+        if(productList.containsKey(product)){
+            throw new ProductAlreadyRegisteredException("Oops, Product already exist");
         }
+        productList.put(product,0);
     }
 
     @Override

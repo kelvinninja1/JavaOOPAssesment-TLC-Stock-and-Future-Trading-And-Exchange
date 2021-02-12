@@ -17,16 +17,11 @@ public class Product implements ProductPricingService {
         return 0;
     }
 
-    Product (Product product){
-        Product result = productList.stream()
-                .filter(x -> product.equals(x))
-                .findAny()
-                .orElse(null);
-        if (!result.equals(null)) {
-            this.productList.add(student);
-            return True;
-        } else {
-            return False;
-        }
+    public Product(String productId, double currentPrice, String exchange) {
+        this.productId = productId;
+        this.currentPrice = currentPrice;
+        this.exchange = exchange;
     }
+
+
 }
